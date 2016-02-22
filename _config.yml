@@ -67,8 +67,6 @@ theme: apollo
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type:
 
 
 # 在归档页面显示所有文章
@@ -83,3 +81,8 @@ admin:
   username: johny
   password_hash: $2a$08$0J/JpeOHwcZ.z1jsikxczeAOtd6t2dv7xGOmeuzGesJhVdYXc/n6S
   secret: a secret something
+
+deploy:
+      type: git
+      repository: https://github.com/username/zsjohny.github.com.git
+      branch: master
