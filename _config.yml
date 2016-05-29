@@ -4,8 +4,8 @@
 
 # Site
 title: MC on the way
-subtitle:
-description:
+subtitle: “Stop managing your time. Start managing your focus.”
+description: “Stop managing your time. Start managing your focus.”
 author: Johny
 language: en
 timezone:
@@ -63,7 +63,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: apollo
+#theme: apollo
+theme: clean-blog
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
@@ -86,3 +87,7 @@ deploy:
       type: git
       repository: https://github.com/zsjohny/zsjohny.github.io.git
       branch: master
+
+search:
+  path: search.xml
+  field: post
