@@ -9,6 +9,12 @@ description: “Stop managing your time. Start managing your focus.”
 author: Johny
 language: en
 timezone:
+#- English (default)
+#- 中文简体 (zh-Hans)
+#- French (fr-FR)
+#- 正体中文 (zh-hk/zh-tw)
+#- Russian (ru)
+#- German (de)
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
