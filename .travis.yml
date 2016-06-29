@@ -12,9 +12,9 @@ install:
 - npm install
 script:
 - hexo clean
-- hexo generate
+#- hexo generate
 after_success:
-- hexo deploy
+- hexo d
 env:
   global:
     secure: h4Pmiu0fBIlN8l/dQ1CVEWwOYd96cfniZtG7yubHT1o9+25basTXxOa2Vjnn4vuigPATisU4TnnkV8abQQnS/kCsmAHIpsKm5iomEpaJIBpIcvhY/GPHh6jpcq+cgEHDck5aezRwiigK+QRRBTO5atnng7z0pycKEeTXB3Wqel7xiHQTiBpDd4xpYtw+ZgSZ7nXDXwv+0CUY7sG3nkgKjgXHzQk9C74PDRwj2uMyZmWs/r4U+kOM7SJjRUiRqixFDcS8uBPkmMk58PknPTaiEVcp3QUmkUeGJ5oWg80mM0kybmyTWAq9h6v9vJOa6zrV790ijLN0UDt0Bqm4wOQiNNYPc0iq0uVSYNn/hNuZBNafRKNpf0bdRQ+hZIYgZadKo/XNFu1FiczLpHpRnJl9mUX53wEXSSmiabbgEE4vRfi8eq5zRhyXdIcIzTk/awUReRBw9uEHf6679PrtB6SDVeNxYgIs3DwPYqfw1/bepRT/IX1WYajfPU/sAMZOeEBlu+tf2lhXiAaPVU7ZouE8VFNVuUSTi0hvC6hIW/I7YcPshPv36qsJcrUO/y3xscMjld1EAdo2E7oMDb/CTxJXBkbJtsHjaD7n+7JcagvVscE0a0CAyJEBI9Ozxq/Gpv95n7grwmEuRD59NQZfUoM3EEJKIs5zL5TXJsDgW0LoZMI=
