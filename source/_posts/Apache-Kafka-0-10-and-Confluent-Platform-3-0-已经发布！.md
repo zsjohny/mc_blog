@@ -1,6 +1,10 @@
 title: ' How to install loginsight agent'
 date: 2016-05-29 18:09:01
 tags:
+  - loginsight
+  - agent
+categories:
+  - scripts
 ---
 **How to install loginsight agent**
 ===========
