@@ -73,7 +73,7 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 #theme: apollo
 #theme: clean-blog
-theme: hexo-theme-next
+theme: next
 #theme: hexo-theme-huxblog
 #theme: startbootstrap-clean-blog
 #theme: hexo-theme-tranquilpeak
