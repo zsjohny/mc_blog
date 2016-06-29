@@ -97,7 +97,7 @@ admin:
 
 deploy:
     type: git
-    repository: https://github.com/zsjohny/zsjohny.github.io.git
+    repository: git@github.com:zsjohny/zsjohny.github.io.git
     branch: master
 
 search:
