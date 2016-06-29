@@ -3,6 +3,12 @@ branches:
   only:
   - master
 before_install:
+- openssl aes-256-cbc -K $encrypted_b516168dc854_key -iv $encrypted_b516168dc854_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/id_rsa
+- cp .travis/ssh_config ~/.ssh/config
 - npm install -g hexo
 - npm install -g hexo-cli
 before_script:
@@ -19,4 +25,4 @@ cache:
   - node_modules
 env:
   global:
-    secure: ftWjVCB6YObQe3PEkK69rEN2RFroVqWAYtm9n2sqxsI12uqSU41OxPyP4IG7DLPWEBZ6VmFqzGrvQBs9lgkycHpWmG4N3oLnE3Spf9cqgQyo8hWkXardxYT5WqPtvcVRJJVL2xO8AVOMdPAMJRdB7qO37r/Mh+aWxE3BnM7A/kcVtM1zfbq9/DYzJIcx/xz0cjlscREiHpWSTF0LjxRozi5w43u0SBT6WnnYRCbby8IwL3fo8gLc8WldSShjCp7e1Z/Hg62B644dNL44s8uTql1im5eZEb+MMbpUwZR/zuWFuzNjKwGqY/sFdJicLc20TcNtriO2Faf1bYBM679dUCzbrqgDvD74bkXHljqex4mnnSv+viIx47c0jTG9mXpTsX+ffR4agElrNR4zBhQ/zyXw+LuXgUBAIjXFx59I/GodytEbixIWJ/nE0Kw2LaLetkp5jr6+q1XgvxNe+9fNg7LA8ScLf1znL2+SBrf9CiLa9ADJtbifIH9SYCDGQ9oOunfzEvBqSsPGe9xIrK2q+wTNvjZF/OsBtRhKrDfHhCnEHEH0dUu7zsI3Y8nUHSP6JV8z4ZCd+iL8RS2MS43Xdhmh2Pxp2a54Ez/XCfXaW4bvcVPErKo2wRxs8TfPahlQOqyUeoxOmh8kL+kMlLd3pISbvUZzN0HDBApvPRvFMks=
+    secure: A6dss6VGfjgUaRNgOrC/5JTkMBOlk5d2ZO/LZXiRFcFCdPGEAyD4nk0WDQvEb+AsCnJIbISYk0uuX7TlNA2n/0+bXIESrAUnmUk18KidqmwqwngzJpGMU7NzpJPnxSbhUetb1mo+oh9HF2EJZ0w0J7S57SzqhX20j6RuexcX/xxTZ04kWi+Zav/HqQ9+Dy19qYxMY45z6OSiNcXV/Z7oPuwaluGvOFwTXLA6Jv+eTD3OgLMBxgdp2dAenqhVLb6c1h0wV3qQjkwPJQmC/MwUtZEmEg86QZWb+rV2Pw6LV+ou8ynDW2PIAt+RNgLpU7vNXG8FXmyRx36y5J3knKH4PYF9xKRzxTKLS5zH0VozdP5ylrM08XMdIngFr2bf/o0EoqTdHA/twbwme5P/AYB2H1rRzFIJ70f+ChL0jchqdIt4kgTyVIx10MeISg33Ye7aewT0zZQ6C0ZSAoNGf+1neX1fW/+g/EMKtQCfMM+i2LmGGSy+6WVhN38fyeLuE5n4wJf6af70Jr2OzA1IrXMGto2AV/UPQiP/2RrOOzJOl18FKO08mKTIIu6Yv/khPkNbOoh+hMBNnm9OkXPa0xaavcmw3LQR5TFz0jjxGTHJ4bO+FevZiwho8MPMQKEv9NWACguj33E19pOw8NV67kRVTSLu8Eyc24Bu580jlRCfZ3g=
