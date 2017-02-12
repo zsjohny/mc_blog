@@ -1,13 +1,13 @@
-# Set MySQL character set and collation to UTF-8 (RDS)
-    These are notes for how to set UTF-8 (UTF8) collation and character set in MySQL database server. There are also notes on how to set the dfeault collation and characters set to UTF-8 on Amazon RDS MySQL database instances.
+title: Set MySQL character set and collation to UTF-8 (RDS)
+date: 2017-02-12 21:17:18 
+tags:
+  - mysql
 
-    utf8_unicode_ci vs utf8_general_ci collation
-
-    In general, utf8_unicode_ci should always be used. It provides correct sorting in all languages. The utf8_general_ci collation takes shortcuts and does not sort exactly right in certain languages, and its only benefit is a tiny performance increase.
-
-
+categories: mysql
+---
 
 ## Show current collation variable settings
+     
      SHOW VARIABLES LIKE '%colla%';
 
 ## This is the output you want to see
@@ -115,7 +115,6 @@
 ### Reboot is also possible from the Amazon RDS Console
 rds-reboot-db-instance "my-database-param-groups"
 
-------------------------------------------------------------
 
 ## the following parameter must be 'pending-reboot'
     rds-modify-db-parameter-group "my-database-param-group" --parameters "name=innodb_buffer_pool_size, value=134217728, method=pending-reboot"
