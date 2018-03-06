@@ -92,7 +92,8 @@ archive_generator:
 
 admin:
     username: johny
-    password_hash: $2a$08$0J/JpeOHwcZ.z1jsikxczeAOtd6t2dv7xGOmeuzGesJhVdYXc/n6S
+    # 123456
+    password_hash: $2a$10$RCVIN6mkjizo95Kp2RIALOd.IfPxEsrFRKlzxEEak3Ure6ZyamRCa
     secret: a secret something
 
 deploy:
